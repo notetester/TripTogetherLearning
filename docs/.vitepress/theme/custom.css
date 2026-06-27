@@ -1,0 +1,39 @@
+:root {
+  --vp-c-brand-1: #5e6ad2;
+  --vp-c-brand-2: #4c57bd;
+  --vp-c-brand-3: #404aa8;
+  --vp-c-brand-soft: rgba(94, 106, 210, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #5e6ad2, #7c87ff);
+}
+
+.dark {
+  --vp-c-brand-1: #8a93ec;
+  --vp-c-brand-2: #7c87ff;
+  --vp-c-brand-3: #6b76e0;
+}
+
+/* 본문 가독성: 한국어 줄간격 */
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.78;
+}
+
+/* 인용구(한 줄 핵심)를 카드처럼 */
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 16px;
+}
+.vp-doc blockquote > p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 표를 조금 더 촘촘하게 */
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
