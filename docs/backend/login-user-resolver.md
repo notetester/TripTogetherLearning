@@ -32,7 +32,7 @@ if (user == null) { /* 401 응답 직접 작성 */ }
 해결책은 **관심사 분리**다. "세션에서 사용자를 꺼낸다"는 한 곳(`LoginUserArgumentResolver`)에 모으고, 컨트롤러는 `@LoginUser UsersVO user`라고 **선언만** 한다. 의존성이 시그니처에 명시되어 테스트와 코드 리뷰가 쉬워진다.
 
 :::tip 권한 검증과는 별개 관심사다
-주입(누구인지 꺼내기)과 인가(접근해도 되는지 막기)는 분리돼 있다. 리졸버는 **막지 않는다** — 비로그인이면 `null`을 줄 뿐이다. 차단은 `@RequireLogin`/`@RequireAdmin`(AOP)이나 `LoginInterceptor`(URL 패턴)가 담당한다. 자세히는 [권한 AOP](/backend/authorization-aop).
+주입(누구인지 꺼내기)과 인가(접근해도 되는지 막기)는 분리돼 있다. 리졸버는 **막지 않는다** — 비로그인이면 `null`을 줄 뿐이다. 차단은 `@RequireLogin`/`@RequireAdmin`(AOP)이나 `LoginInterceptor`(URL 패턴)가 담당한다. 자세히는 [권한 AOP](/backend/aop-authorization).
 :::
 
 ## 3. 어떤 기술로 구현했나 (실제 클래스·테이블)
